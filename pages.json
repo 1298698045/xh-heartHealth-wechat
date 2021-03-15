@@ -1,0 +1,167 @@
+{
+	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
+		{
+			"path": "pages/index/index",
+			"style": {
+				"navigationBarTitleText": "协和心健康随访中心",
+				"navigationStyle": "custom"
+			}
+		}
+	    ,{
+            "path" : "pages/login/index/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "协和心健康随访中心",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/register/index/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "注册",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/team/index/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "团队介绍",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+            }
+            
+        }
+        ,{
+            "path" : "pages/healthScience/index/index",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "健康科普",
+                "enablePullDownRefresh": false
+            }
+            
+        },
+		{
+		    "path" : "pages/questionnaire/questionnaire/questionnaire",
+		    "style" :                                                                                    
+		    {
+		        "navigationBarTitleText": "随访问卷",
+		        "enablePullDownRefresh": false
+		    }
+		    
+		}
+        ,{
+            "path" : "pages/questionnaire/add/add",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "创建问卷",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/questionnaire/edit/edit",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "编辑问卷",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/questionnaire/edit_explain/edit_explain",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "编辑问卷",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/questionnaire/addSubject/addSubject",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "编辑问卷",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/questionnaire/setting/setting",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "问卷设置",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/questionnaire/home_c/home_c",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "随访问卷",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/questionnaire/fill_in/fill_in",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/questionnaire/preview/preview",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/personalCenter/personalCenter",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+            }
+            
+        }
+        ,{
+            "path" : "pages/message/message",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "留言咨询",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+    ],
+	"easycom": {
+		"autoscan": true,
+		"custom": {
+			"^uni-(.*)": "@/components/uni-$1.vue", // 匹配components目录内的vue文件
+			"tui-(.*)": "@/components/thorui/thorui/tui-$1/tui-$1.vue"
+		}
+	},
+	"globalStyle": {
+		"navigationBarTextStyle": "black",
+		"navigationBarTitleText": "协和心健康",
+		"navigationBarBackgroundColor": "#FFFFFF",
+		"backgroundColor": "#F8F8F8",
+		"usingComponents":{
+			"van-nav-bar": "/wxcomponents/vant/nav-bar/index",
+			"van-button": "/wxcomponents/vant/button/index",
+			"van-icon":"/wxcomponents/vant/icon/index",
+			"van-search":"/wxcomponents/vant/search/index"
+		}
+	}
+}
