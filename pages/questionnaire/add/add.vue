@@ -79,7 +79,7 @@
 					border: 2rpx solid #dcdddf;
 					border-radius: 7rpx;
 					font-size: 36rpx;
-					padding: 33rpx 25rpx;
+					padding: 0 25rpx;
 					box-sizing: border-box;
 				}
 				.textarea.active{

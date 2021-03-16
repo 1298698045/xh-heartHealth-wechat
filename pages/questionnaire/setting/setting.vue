@@ -21,7 +21,7 @@
 					</div>
 				</div>
 			</div>
-			<div class="panel">
+		<!-- 	<div class="panel">
 				<div class="cell">
 					<p class="label">问卷外观</p>
 					<div class="arrow">
@@ -29,7 +29,7 @@
 						<van-icon name="arrow" size="16px" color="#999999" />
 					</div>
 				</div>
-			</div>
+			</div> -->
 			<div class="panel">
 				<div class="cell">
 					<p class="label">开始时间</p>

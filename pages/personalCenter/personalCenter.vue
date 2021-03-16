@@ -19,19 +19,25 @@
 		<div class="container">
 			<div class="content">
 				<div class="info">
-					<div class="row">
+					<div class="row" @click="getUserTab(0)">
 						<div class="avatar"></div>
 						<div class="name">
 							我
 						</div>
 					</div>
-					<div class="row">
+					<div class="row" @click="getUserTab(1)">
+						<div class="avatar"></div>
+						<div class="name">
+							张三
+						</div>
+					</div>
+					<div class="row" @click="handleAddUser">
 						<div class="avatar active">
 							<tui-icon name="plus" color="#fff"></tui-icon>
 						</div>
 					</div>
 				</div>
-				<div class="panelWrap">
+				<div class="panelWrap" :class="{'active':userIdx==0}" v-if="userIdx==0">
 					<div class="tabs">
 						<div class="tab" :class="{'active':idx==index}"
 							@click="handleTab(item,index)"
@@ -76,6 +82,33 @@
 						</div>
 					</div>
 				</div>
+				<div class="panelWrap" :class="{'activeUser':userIdx==1}" v-if="userIdx==1">
+					<div class="userInfo">
+						<div class="field">
+							<p class="label">姓名</p>
+							<p class="value">张三</p>
+						</div>
+						<div class="field">
+							<p class="label">身份证号码</p>
+							<p class="value">51**************12</p>
+						</div>
+						<div class="field">
+							<p class="label">性别</p>
+							<p class="value">男</p>
+							
+						</div>
+						<div class="field">
+							<p class="label">性别</p>
+							<div class="right">
+								<p class="value phone">186******186</p>
+								<i class="iconfont icon-bianji"></i>
+							</div>
+						</div>
+						<div class="desc">
+							在您咨询患者病情状态或登录时，以上个人信息将以脱敏形式呈现。
+						</div>
+					</div>
+				</div>
 			</div>
 		</div>
 	</view>
@@ -102,7 +135,8 @@
 				],
 				idx:0,
 				navheadStyle:"",
-				isNav:false
+				isNav:false,
+				userIdx:0
 			}
 		},
 		onLoad(){
@@ -149,12 +183,21 @@
 			},
 			handleTab(item,index){
 				this.idx = index;
+			},
+			getUserTab(idx){
+				this.userIdx = idx;
+			},
+			handleAddUser(){
+				uni.navigateTo({
+					url:'../info_add/info_add'
+				})
 			}
 		}
 	}
 </script>
 
 <style lang="scss">
+	@import url('../../static/css/iconfont.css');
 	.wrap{
 		min-height: 100vh;
 		background: #f3f4f4;
@@ -246,7 +289,18 @@
 						}
 					}
 				}
-				 .panelWrap:before{
+				.panelWrap.activeUser:before{
+					content: "";
+					border: 10px solid transparent;
+					border-bottom-color: #fff;
+					position: absolute;
+					left: 188rpx;
+					top: 67px;
+					margin-top: -20px;
+					display: block;
+					z-index: 9999;
+				}
+				 .panelWrap.active:before{
 					content: "";
 					border: 10px solid transparent;
 					border-bottom-color: #fff;
@@ -358,6 +412,48 @@
 									}
 								}
 							}
+						}
+					}
+					.userInfo{
+						min-height: 60vh;
+						padding: 16rpx 30rpx;
+						.field:last-child{
+							border-bottom: none;
+						}
+						.field{
+							display: flex;
+							justify-content: space-between;
+							align-items: center;
+							font-size: 35rpx;
+							color: #333333;
+							padding: 30rpx 0;
+							box-sizing: border-box;
+							border-bottom: 1rpx solid #ccc;
+							.value{
+								font-size: 30rpx;
+								color: #666666;
+							}
+							.right{
+								display: flex;
+								align-items: center;
+								.phone{
+									color: #6db781;
+									font-size: 30rpx;
+									margin-right: 17rpx;
+								}
+								i{
+									color: #666666;
+								}
+							}
+							
+						}
+						.desc{
+							background: #f5f5f5;
+							border-radius: 13rpx;
+							padding: 33rpx 25rpx;
+							color: #aaaaaa;
+							font-size: 28rpx;
+							margin-top: 27rpx;
 						}
 					}
 				}

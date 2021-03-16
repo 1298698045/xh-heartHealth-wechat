@@ -11,7 +11,8 @@
 				<div class="edit" v-if="isBook">
 					<div class="row" @click="getEdit">
 						<p class="icon">
-							<van-icon name="edit" size="20px" color="#999999" />
+							<i class="iconfont icon-bianji1" style="color:#999999;"></i>
+							<!-- <van-icon name="edit" size="20px" color="#999999" /> -->
 						</p>
 						<p class="text">编辑</p>
 					</div>
@@ -86,31 +87,36 @@
 					<div class="ActionSheet">
 						<div class="box">
 							<p class="icon">
-								<tui-icon name="edit"></tui-icon>
+								<!-- <tui-icon name="edit"></tui-icon> -->
+								<i class="iconfont icon-bianji1" style="color:#ababab;"></i>
 							</p>
 							<p class="tag">编辑</p>
 						</div>
 						<div class="box">
 							<p class="icon">
-								<tui-icon name="edit"></tui-icon>
+								<!-- <tui-icon name="edit"></tui-icon> -->
+								<i class="iconfont icon-fuzhi1" style="color:#ababab;"></i>
 							</p>
 							<p class="tag">复制</p>
 						</div>
 						<div class="box">
 							<p class="icon">
-								<tui-icon name="edit"></tui-icon>
+								<!-- <tui-icon name="edit"></tui-icon> -->
+								<i class="iconfont icon-shangyi" style="color:#ababab;"></i>
 							</p>
 							<p class="tag">上移</p>
 						</div>
 						<div class="box">
 							<p class="icon">
-								<tui-icon name="edit"></tui-icon>
+								<!-- <tui-icon name="edit"></tui-icon> -->
+								<i class="iconfont icon-xiayi" style="color:#ababab;"></i>
 							</p>
 							<p class="tag">下移</p>
 						</div>
 						<div class="box">
 							<p class="icon">
-								<tui-icon name="edit"></tui-icon>
+								<!-- <tui-icon name="edit"></tui-icon> -->
+								<i class="iconfont icon-shanchu1" style="color:#ababab;"></i>
 							</p>
 							<p class="tag">删除</p>
 						</div>
@@ -120,26 +126,37 @@
 		</div>
 		<div class="add_title">
 			<button class="btn" type="primary" @click="getAddSubject">
-				<van-icon name="plus" color="#333333" size="18px" />
-				添加题目
+				<i class="iconfont icon-tianjia"></i>
+				<!-- <van-icon name="plus" color="#333333" size="18px" /> -->
+				<span class="add">
+					添加题目
+				</span>
 			</button>
 		</div>
 		<div class="footer" :class="{'footerActive':isModelmes}">
 			<div class="block">
 				<div class="box" @click="getAddSubject">
-					<p class="icon"></p>
+					<p class="icon">
+						<i class="iconfont icon-timu" style="color:#53565B;font-size: 20px;"></i>
+					</p>
 					<p class="name">题目</p>
 				</div>
 				<div class="box" @click="getSetting">
-					<p class="icon"></p>
+					<p class="icon">
+						<i class="iconfont icon-shezhi" style="color:#53565B;font-size: 20px;"></i>
+					</p>
 					<p class="name">设置</p>
 				</div>
 				<div class="box" @click="getPreveiew">
-					<p class="icon"></p>
+					<p class="icon">
+						<i class="iconfont icon-yulan" style="color:#53565B;font-size: 20px;"></i>
+					</p>
 					<p class="name">预览</p>
 				</div>
 				<div class="box">
-					<p class="icon"></p>
+					<p class="icon">
+						<i class="iconfont icon-baocun" style="color:#53565B;font-size: 20px;"></i>
+					</p>
 					<p class="name">保存</p>
 				</div>
 			</div>
@@ -193,6 +210,7 @@
 </script>
 
 <style lang="scss">
+	@import url('../../../static/css/iconfont.css');
 	.wrap{
 		min-height: 100vh;
 		background: #f3f4f4;
@@ -228,6 +246,9 @@
 					justify-content: center;
 					border-top: 2rpx solid #dcdddf;
 					padding: 20rpx 0;
+					.icon{
+						text-align: center;
+					}
 					.text{
 						font-size: 28rpx;
 						color: #999999;
@@ -307,6 +328,9 @@
 				display: flex;
 				justify-content: center;
 				align-items: center;
+				.add{
+					margin-left: 10rpx;
+				}
 			}
 		}
 		.footer{

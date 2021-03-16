@@ -15,7 +15,7 @@
 		</div>
 		<div class="container">
 			<div class="content">
-				<div class="box">
+				<div class="box" @click="handleOpen">
 					<div class="l_box">
 						<p class="name">心血管健康调查</p>
 						<div class="tag">
@@ -30,6 +30,56 @@
 				</div>
 			</div>
 		</div>
+		<van-popup
+		  :show="showPopup"
+		  position="bottom"
+		  custom-style="height: auto;background:#f7f7f7;"
+		  @close="onClose"
+		>
+			<div class="popup">
+				<div class="title">
+					协和心健康——心血管健康调查
+				</div>
+				<div class="boxCont">
+					<div class="box">
+						<div class="top">
+							<i class="iconfont icon-bianji" style="color:#53565B;font-size: 20px;"></i>
+						</div>
+						<p class="name">编辑</p>
+					</div>
+					<div class="box">
+						<div class="top">
+							<i class="iconfont icon-zanting" style="color:#53565B;font-size: 20px;"></i>
+						</div>
+						<p class="name">暂停</p>
+					</div>
+					<div class="box">
+						<div class="top">
+							<i class="iconfont icon-fenxiang" style="color:#53565B;font-size: 20px;"></i>
+						</div>
+						<p class="name">分享</p>
+					</div>
+					<div class="box">
+						<div class="top">
+							<i class="iconfont icon-tongji" style="color:#53565B;font-size: 20px;"></i>
+						</div>
+						<p class="name">结果</p>
+					</div>
+					<div class="box">
+						<div class="top">
+							<i class="iconfont icon-fuzhi" style="color:#53565B;font-size: 20px;"></i>
+						</div>
+						<p class="name">复制</p>
+					</div>
+					<div class="box">
+						<div class="top">
+							<i class="iconfont icon-shanchu" style="color:#53565B;font-size: 20px;"></i>
+						</div>
+						<p class="name">删除</p>
+					</div>
+				</div>
+			</div>
+		</van-popup>
 	</view>
 </template>
 
@@ -37,7 +87,8 @@
 	export default {
 		data() {
 			return {
-				value:""
+				value:"",
+				showPopup:false
 			}
 		},
 		methods: {
@@ -47,12 +98,19 @@
 				uni.navigateTo({
 					url:url
 				})
+			},
+			handleOpen(){
+				this.showPopup =  true;
+			},
+			onClose(){
+				this.showPopup = false
 			}
 		}
 	}
 </script>
 
 <style lang="scss">
+	@import url('../../../static/css/iconfont.css');
 	.wrap{
 		.header{
 			padding: 20rpx 28rpx;
@@ -120,6 +178,43 @@
 						}
 					}
 					
+				}
+			}
+		}
+		.popup{
+			min-height: 30vh;
+			padding-bottom: 49rpx;
+			background: #f7f7f7;
+			.title{
+				font-size: 24rpx;
+				color: #999999;
+				border-bottom: 2rpx solid #ccc;
+				padding: 29rpx 0;
+				text-align: center;
+				background: #fff;
+			}
+			.boxCont{
+				background: #f7f7f7;
+				display: flex;
+				flex-wrap: wrap;
+				.box{
+					width: 25%;
+					.top{
+						width: 110rpx;
+						height: 110rpx;
+						background: #fff;
+						border-radius: 15rpx;
+						margin: 0 auto;
+						line-height: 110rpx;
+						text-align: center;
+						margin-top: 49rpx;
+					}
+					.name{
+						font-size: 28rpx;
+						color: #737373;
+						text-align: center;
+						margin-top: 27rpx;
+					}
 				}
 			}
 		}

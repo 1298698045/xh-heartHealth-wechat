@@ -144,6 +144,34 @@
             }
             
         }
+        ,{
+            "path" : "pages/news/news",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "健康科普",
+                "enablePullDownRefresh": true
+            }
+            
+        }
+        ,{
+            "path" : "pages/news/detail",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "",
+                "enablePullDownRefresh": false
+            }
+            
+        }
+        ,{
+            "path" : "pages/info_add/info_add",
+            "style" :                                                                                    
+            {
+                "navigationBarTitleText": "信息填写",
+                "enablePullDownRefresh": false,
+				"navigationStyle": "custom"
+            }
+            
+        }
     ],
 	"easycom": {
 		"autoscan": true,
@@ -161,7 +189,8 @@
 			"van-nav-bar": "/wxcomponents/vant/nav-bar/index",
 			"van-button": "/wxcomponents/vant/button/index",
 			"van-icon":"/wxcomponents/vant/icon/index",
-			"van-search":"/wxcomponents/vant/search/index"
+			"van-search":"/wxcomponents/vant/search/index",
+			"van-popup":"/wxcomponents/vant/popup/index"
 		}
 	}
 }

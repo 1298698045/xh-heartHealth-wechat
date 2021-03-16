@@ -9,8 +9,10 @@
 			<div class="r_box">
 				<div class="r_row" v-for="(item,index) in list" :key="index" @click="handleItem(item,index)">
 					<p class="icon">
-						<tui-icon name="circle-fill" v-if="item.checked" color="#6db781"></tui-icon>
-						<tui-icon name="circle-fill" v-else></tui-icon>
+						<i class="iconfont icon-duoxuantixuanzhong" style="color:#6db781;" v-if="item.checked"></i>
+						<i class="iconfont icon-duoxuan1" style="color:#E0E0E0;" v-else></i>
+						<!-- <tui-icon name="circle-fill" v-if="item.checked" color="#6db781"></tui-icon>
+						<tui-icon name="circle-fill" v-else></tui-icon> -->
 					</p>
 					<p class="label">
 						{{item.label}}
@@ -48,6 +50,7 @@
 </script>
 
 <style lang="scss">
+	@import url('../static/css/iconfont.css');
 	.check_wrap{
 		background: #FFFFFF;
 		padding-bottom: 65rpx;

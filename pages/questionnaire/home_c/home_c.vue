@@ -11,7 +11,7 @@
 		<div class="container">
 			<div class="box" v-for="(item,index) in list" :key="index">
 				<div class="icon">
-					<p></p>
+					<i class="iconfont icon-timu1" style="color:#6db781;"></i>
 				</div>
 				<div class="rightCont">
 					<p class="name">
@@ -66,6 +66,7 @@
 </script>
 
 <style lang="scss">
+	@import url('../../../static/css/iconfont.css');
 	.wrap{
 		min-height: 100vh;
 		background: #f3f4f3;
@@ -113,12 +114,14 @@
 				background: #FFFFFF;
 				margin-top: 40rpx;
 				display: flex;
+				padding-bottom: 33rpx;
 				// padding: 33rpx 39rpx;
 				.icon{
-					width: 23rpx;
-					height: 32rpx;
-					background: #ccc;
+					// width: 23rpx;
+					// height: 32rpx;
+					// background: #ccc;
 					margin:33rpx 0 0 39rpx;
+					text-align: center;
 				}
 				.rightCont{
 					font-size: 30rpx;

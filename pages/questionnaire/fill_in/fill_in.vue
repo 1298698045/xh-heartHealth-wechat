@@ -28,7 +28,8 @@
 								<input type="text" placeholder-class="placeholder" placeholder="请输入选项">
 							</div>
 							<p class="icon" @click="getChoseImage(item,index)">
-								<tui-icon name="pic" v-if="item.imgUrl==''"></tui-icon>
+								<i class="iconfont icon-tupian" v-if="item.imgUrl==''" style="color:#ababab;"></i>
+								<!-- <tui-icon name="pic" v-if="item.imgUrl==''"></tui-icon> -->
 								<image v-else :src="item.imgUrl"></image>
 							</p>
 						</div>
@@ -229,6 +230,7 @@
 </script>
 
 <style lang="scss">
+	@import url('../../../static/css/iconfont.css');
 	.wrap{
 		min-height: 100vh;
 		background: #f3f4f4;
