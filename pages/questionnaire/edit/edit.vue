@@ -153,7 +153,7 @@
 					</p>
 					<p class="name">预览</p>
 				</div>
-				<div class="box">
+				<div class="box" @click="getSave">
 					<p class="icon">
 						<i class="iconfont icon-baocun" style="color:#53565B;font-size: 24px;"></i>
 					</p>
@@ -204,6 +204,22 @@
 				uni.navigateTo({
 					url:'../preview/preview'
 				})
+			},
+			getSave(){
+				wx.showModal({
+				  title: '保存成功',
+				  content: '问卷保存成功，是否立即发布？',
+				  cancelText:"继续编辑",
+				  confirmText:"发布调查",
+				  confirmColor:"#6db781",
+				  success (res) {
+				    if (res.confirm) {
+				      console.log('用户点击确定')
+				    } else if (res.cancel) {
+				      console.log('用户点击取消')
+				    }
+				  }
+				})	
 			}
 		}
 	}

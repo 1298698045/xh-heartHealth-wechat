@@ -19,8 +19,21 @@
 					<div class="l_box">
 						<p class="name">心血管健康调查</p>
 						<div class="tag">
-							<p class="round"></p>
+							<p class="round active"></p>
 							<p class="status">已发布</p>
+						</div>
+					</div>
+					<div class="r_box">
+						<p class="total">115225</p>
+						<p class="desc">答卷数量</p>
+					</div>
+				</div>
+				<div class="box" @click="handleOpen">
+					<div class="l_box">
+						<p class="name">心血管健康调查</p>
+						<div class="tag">
+							<p class="round"></p>
+							<p class="status">未发布</p>
 						</div>
 					</div>
 					<div class="r_box">
@@ -155,6 +168,9 @@
 								height: 12rpx;
 								background: #999999;
 								border-radius: 50%;
+							}
+							.round.active{
+								background: #6db781;
 							}
 							.status{
 								font-size: 28rpx;
