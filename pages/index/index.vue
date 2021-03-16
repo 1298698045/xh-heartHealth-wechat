@@ -83,21 +83,21 @@
 							<p class="title">今天你抑郁了么</p>
 							<p class="desc">国际标准抑郁症测试</p>
 							<div class="bottom_text">
-								20个问题   预计需2分钟  115225人已测
+								20个问题 <span>|</span>  预计需2分钟 <span>|</span> 115225人已测
 							</div>
 						</div>
 						<div class="panel gre">
 							<p class="title">今天你抑郁了么</p>
 							<p class="desc">国际标准抑郁症测试</p>
 							<div class="bottom_text">
-								20个问题   预计需2分钟  115225人已测
+								20个问题 <span>|</span>  预计需2分钟 <span>|</span> 115225人已测
 							</div>
 						</div>
 						<div class="panel yel">
 							<p class="title">今天你抑郁了么</p>
 							<p class="desc">国际标准抑郁症测试</p>
 							<div class="bottom_text">
-								20个问题   预计需2分钟  115225人已测
+								20个问题 <span>|</span>  预计需2分钟 <span>|</span>  115225人已测
 							</div>
 						</div>
 					</div>
@@ -206,7 +206,7 @@
 			background-image: url("../../static/images/bg_2_bottom.png");
 			background-size: 100% 100%;
 			position: relative;
-			padding-top: 41rpx;
+			// padding-top: 41rpx;
 			.banner{
 				width: 702rpx;
 				margin: 0 auto;
@@ -214,7 +214,7 @@
 				// position: absolute;
 				// top: 20rpx;
 				// left: 24rpx;
-				box-shadow: 0rpx 14rpx 70rpx 0rpx rgba(0, 0, 0, 0.1);
+				box-shadow: 0rpx 14rpx 70rpx 0rpx rgba(0, 4rpx, 20rpx, 0);
 				.img{
 					width: 100%;
 					height: 100%;
@@ -225,10 +225,11 @@
 				// padding-top: 150rpx;
 				// background: #fff;
 				// margin-top:500rpx;
-				margin-top: 47rpx;
+				// margin-top: 47rpx;
 				.cloumn_container{
 					background:#fff;
-					padding-bottom:20rpx;
+					margin-top: 47rpx;
+					padding-bottom: 20rpx;
 					.block{
 						display:flex;
 						justify-content:space-between;
@@ -247,15 +248,16 @@
 								}
 							}
 							.name{
-								font-size:28rpx;
+								font-size:32rpx;
 								color:#333333;
 								font-weight:bold;
 								margin-top:10rpx;
 								padding:5rpx 0;
 							}
 							.desc{
-								font-size:24rpx;
+								font-size:28rpx;
 								color:#999999;
+								text-align: center;
 							}
 						}
 					}
@@ -263,8 +265,8 @@
 						width: 692rpx;
 						height: 99rpx;
 						line-height: 99rpx;
-						color:#A1C3B9;
-						font-size:30rpx;
+						color:#609786;
+						font-size: 32rpx;
 						background-image:url('../../static/images/zc.png');
 						background-size:100% 100%	;
 						margin:30rpx auto;
@@ -301,7 +303,7 @@
 						align-items:center;
 						justify-content:space-between;
 						.tab{
-							font-size:32rpx;
+							font-size:31rpx;
 							.name{
 								display:inline-block;
 								padding-bottom:25rpx;
@@ -309,8 +311,9 @@
 								color:#666666;
 							}
 							.name.active{
-								color:#609786;
-								border-bottom:7rpx solid #609786;
+								color:#6db781;
+								border-bottom:7rpx solid #6db781;
+								font-weight: bold;
 							}
 						}
 						
@@ -318,14 +321,13 @@
 					.content{
 						.block_box{
 							padding:49rpx 0;
-							border-bottom:1rpx solid #f6f6f6;
+							border-bottom:2rpx solid #f6f6f6;
 							display:flex;
 							justify-content:space-between;
 							.leftCont{
 								.title{
 									font-size:36rpx;
 									color:#333333;
-									font-weight:bold;
 								}
 								.desc{
 									font-size:28rpx;
@@ -387,6 +389,10 @@
 							.bottom_text{
 								font-size:24rpx;
 								color:#666666;
+								span{
+									color: #dddddd;
+									margin: 0 10rpx;
+								}
 								// e5e7e8
 							}
 						}

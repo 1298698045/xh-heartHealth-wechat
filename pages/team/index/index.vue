@@ -19,9 +19,9 @@
 		</div>
 		<div class="center">
 			<scroll-view scroll-x="true" class="scroll">
-				<div class="tabs">
-					<p class="tab" :class="{active:num==index}" v-for="(item,index) in tabList" :key="index" @click="getSwitch(item,index)">{{item.name}}</p>
-				</div>
+				<!-- <div class="tabs"> -->
+					<span class="tab" :class="{active:num==index}" v-for="(item,index) in tabList" :key="index" @click="getSwitch(item,index)">{{item.name}}</span>
+				<!-- </div> -->
 			</scroll-view>
 			<div class="content">
 				<div class="block" v-for="(item,index) in list" :key="index">
@@ -127,7 +127,7 @@
 						background:#51b386;
 						border-radius:10rpx;
 						.text{
-							font-size:24rpx;
+							font-size:25rpx;
 							color:#fff;
 							font-weight:bold;
 							padding:25rpx;
@@ -140,10 +140,12 @@
 		.center{
 			.scroll{
 				white-space: nowrap;
-				.tabs{
-					width: 100%;
-					display: flex;
-					padding:10rpx 30rpx;
+				display: flex;
+				padding-left: 24rpx;
+				// .tabs{
+					// width: 100%;
+					// display: flex;
+					// padding:10rpx 30rpx;
 					.tab{
 						width: 162rpx;
 						height: 52rpx;
@@ -155,14 +157,15 @@
 						margin: 10rpx;
 						text-align:center;
 						box-sizing:border-box;
+						display: inline-block;
 					}
 					.tab.active{
 						color: #50b089;
 						font-weight:bold;
-						border:1rpx solid #dae9fc;
+						border:1rpx solid #6db781;
 						background:#f3fbfb;
 					}
-				}
+				// }
 			}
 			.content{
 				margin-top:20rpx;
@@ -184,7 +187,7 @@
 					.rightCont{
 						flex:1;
 						padding:24rpx;
-						border-bottom:1rpx solid #f6f6f6;
+						border-bottom:2rpx solid #f6f6f6;
 						.head{
 							font-size:28rpx;
 							color:#000000;
@@ -211,7 +214,7 @@
 								line-height: 30rpx;
 								text-align:center;
 								border-radius:5rpx;
-								background:#50b089;
+								background:#6db781;
 								font-size:18rpx;
 								color:#ffffff;
 								margin-right:10rpx;

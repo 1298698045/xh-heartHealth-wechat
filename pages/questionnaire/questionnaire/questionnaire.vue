@@ -43,31 +43,31 @@
 				<div class="boxCont">
 					<div class="box">
 						<div class="top">
-							<i class="iconfont icon-bianji" style="color:#53565B;font-size: 20px;"></i>
+							<i class="iconfont icon-bianji" style="color:#53565B;font-size: 24px;"></i>
 						</div>
 						<p class="name">编辑</p>
 					</div>
 					<div class="box">
 						<div class="top">
-							<i class="iconfont icon-zanting" style="color:#53565B;font-size: 20px;"></i>
+							<i class="iconfont icon-zanting" style="color:#53565B;font-size: 24px;"></i>
 						</div>
 						<p class="name">暂停</p>
 					</div>
 					<div class="box">
 						<div class="top">
-							<i class="iconfont icon-fenxiang" style="color:#53565B;font-size: 20px;"></i>
+							<i class="iconfont icon-fenxiang" style="color:#53565B;font-size: 24px;"></i>
 						</div>
 						<p class="name">分享</p>
 					</div>
 					<div class="box">
 						<div class="top">
-							<i class="iconfont icon-tongji" style="color:#53565B;font-size: 20px;"></i>
+							<i class="iconfont icon-tongji" style="color:#53565B;font-size: 24px;"></i>
 						</div>
 						<p class="name">结果</p>
 					</div>
 					<div class="box">
 						<div class="top">
-							<i class="iconfont icon-fuzhi" style="color:#53565B;font-size: 20px;"></i>
+							<i class="iconfont icon-fuzhi" style="color:#53565B;font-size: 24px;"></i>
 						</div>
 						<p class="name">复制</p>
 					</div>

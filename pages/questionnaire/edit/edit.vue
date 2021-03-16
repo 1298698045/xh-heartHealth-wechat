@@ -137,25 +137,25 @@
 			<div class="block">
 				<div class="box" @click="getAddSubject">
 					<p class="icon">
-						<i class="iconfont icon-timu" style="color:#53565B;font-size: 20px;"></i>
+						<i class="iconfont icon-timu" style="color:#53565B;font-size: 24px;"></i>
 					</p>
 					<p class="name">题目</p>
 				</div>
 				<div class="box" @click="getSetting">
 					<p class="icon">
-						<i class="iconfont icon-shezhi" style="color:#53565B;font-size: 20px;"></i>
+						<i class="iconfont icon-shezhi" style="color:#53565B;font-size: 24px;"></i>
 					</p>
 					<p class="name">设置</p>
 				</div>
 				<div class="box" @click="getPreveiew">
 					<p class="icon">
-						<i class="iconfont icon-yulan" style="color:#53565B;font-size: 20px;"></i>
+						<i class="iconfont icon-yulan" style="color:#53565B;font-size: 24px;"></i>
 					</p>
 					<p class="name">预览</p>
 				</div>
 				<div class="box">
 					<p class="icon">
-						<i class="iconfont icon-baocun" style="color:#53565B;font-size: 20px;"></i>
+						<i class="iconfont icon-baocun" style="color:#53565B;font-size: 24px;"></i>
 					</p>
 					<p class="name">保存</p>
 				</div>
@@ -338,6 +338,7 @@
 			position: fixed;
 			bottom: 0;
 			background: #FFFFFF;
+			box-shadow: 0rpx -2rpx 13rpx 0rpx rgba(0, 0, 0, 0.05);
 			.block{
 				display: flex;
 				padding:8rpx 0 47rpx 0;
@@ -353,7 +354,7 @@
 			}
 		}
 		.footer.footerActive{
-			padding-bottom: 50rpx;
+			// padding-bottom: 10rpx;
 		}
 	}
 </style>

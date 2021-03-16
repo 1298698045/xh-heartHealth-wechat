@@ -44,7 +44,7 @@
 					<div class="grid_item" v-for="(v,idx) in item.list" :key="idx">
 						<div class="row">
 							<p class="icon">
-								<i class="iconfont" :class="v.icon" style="color:#53565B;font-size: 20px;"></i>
+								<i class="iconfont" :class="v.icon" style="color:#53565B;font-size: 24px;"></i>
 							</p>
 							<p class="name">{{v.name}}</p>
 						</div>
@@ -146,12 +146,12 @@
 						width: 25%;
 						height: 184rpx;
 						border-collapse: collapse;
-						border-right: 1rpx solid #f5f5f5;
+						border-right: 2rpx solid #f5f5f5;
 						box-sizing: border-box;
 						display: flex;
 						justify-content: center;
 						align-items: center;
-						border-bottom: 1rpx solid #f5f5f5;
+						border-bottom: 2rpx solid #f5f5f5;
 						.row{
 							.icon{
 								text-align: center;
